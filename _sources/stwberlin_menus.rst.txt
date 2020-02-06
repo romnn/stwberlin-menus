@@ -1,0 +1,30 @@
+stwberlin\_menus package
+========================
+
+Submodules
+----------
+
+stwberlin\_menus.cli module
+---------------------------
+
+.. automodule:: stwberlin_menus.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+stwberlin\_menus.stwberlin\_menus module
+----------------------------------------
+
+.. automodule:: stwberlin_menus.stwberlin_menus
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: stwberlin_menus
+   :members:
+   :undoc-members:
+   :show-inheritance:

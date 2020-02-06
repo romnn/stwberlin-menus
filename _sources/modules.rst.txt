@@ -1,0 +1,7 @@
+stwberlin_menus
+===============
+
+.. toctree::
+   :maxdepth: 4
+
+   stwberlin_menus
