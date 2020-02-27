@@ -12,10 +12,10 @@
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
 
       <!-- sphinx script_files -->
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
 
       
       <script src="_static/theme-vendors.js"></script>
@@ -190,35 +190,35 @@ data would be images, download files, section titles, metadatas, index
 entries and toctrees, etc.</p>
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.clear_doc">
-<code class="sig-name descname">clear_doc</code><span class="sig-paren">(</span><em class="sig-param">app: sphinx.application.Sphinx</em>, <em class="sig-param">env: sphinx.environment.BuildEnvironment</em>, <em class="sig-param">docname: str</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.clear_doc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.clear_doc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear_doc</code><span class="sig-paren">(</span><em class="sig-param">app: Sphinx</em>, <em class="sig-param">env: sphinx.environment.BuildEnvironment</em>, <em class="sig-param">docname: str</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.clear_doc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.clear_doc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove specified data of a document.</p>
 <p>This method is called on the removal of the document.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs">
-<code class="sig-name descname">get_outdated_docs</code><span class="sig-paren">(</span><em class="sig-param">app: sphinx.application.Sphinx, env: sphinx.environment.BuildEnvironment, added: Set[str], changed: Set[str], removed: Set[str]</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.get_outdated_docs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_outdated_docs</code><span class="sig-paren">(</span><em class="sig-param">app: Sphinx, env: sphinx.environment.BuildEnvironment, added: Set[str], changed: Set[str], removed: Set[str]</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.get_outdated_docs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.get_outdated_docs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of docnames to re-read.</p>
 <p>This methods is called before reading the documents.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.get_updated_docs">
-<code class="sig-name descname">get_updated_docs</code><span class="sig-paren">(</span><em class="sig-param">app: sphinx.application.Sphinx</em>, <em class="sig-param">env: sphinx.environment.BuildEnvironment</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.get_updated_docs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.get_updated_docs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_updated_docs</code><span class="sig-paren">(</span><em class="sig-param">app: Sphinx</em>, <em class="sig-param">env: sphinx.environment.BuildEnvironment</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.get_updated_docs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.get_updated_docs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of docnames to re-read.</p>
 <p>This methods is called after reading the whole of documents (experimental).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.merge_other">
-<code class="sig-name descname">merge_other</code><span class="sig-paren">(</span><em class="sig-param">app: sphinx.application.Sphinx, env: sphinx.environment.BuildEnvironment, docnames: Set[str], other: sphinx.environment.BuildEnvironment</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.merge_other"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.merge_other" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">merge_other</code><span class="sig-paren">(</span><em class="sig-param">app: Sphinx, env: sphinx.environment.BuildEnvironment, docnames: Set[str], other: sphinx.environment.BuildEnvironment</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.merge_other"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.merge_other" title="Permalink to this definition">¶</a></dt>
 <dd><p>Merge in specified data regarding docnames from a different <cite>BuildEnvironment</cite>
 object which coming from a subprocess in parallel builds.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sphinx.environment.collectors.EnvironmentCollector.process_doc">
-<code class="sig-name descname">process_doc</code><span class="sig-paren">(</span><em class="sig-param">app: sphinx.application.Sphinx</em>, <em class="sig-param">doctree: docutils.nodes.document</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.process_doc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.process_doc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">process_doc</code><span class="sig-paren">(</span><em class="sig-param">app: Sphinx</em>, <em class="sig-param">doctree: docutils.nodes.document</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/sphinx/environment/collectors.html#EnvironmentCollector.process_doc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx.environment.collectors.EnvironmentCollector.process_doc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Process a document and gather specific data from it.</p>
 <p>This method is called after the document is read.</p>
 </dd></dl>
@@ -243,7 +243,7 @@ object which coming from a subprocess in parallel builds.</p>
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2020, romnnn.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1 with <a href="https://github.com/romnnn/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3 with <a href="https://github.com/romnnn/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>
