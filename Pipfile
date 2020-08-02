@@ -30,6 +30,14 @@ invoke = "*"
 m2r = "*"
 twine = "*"
 bump2version = "*"
+# GPRC Compiler
+grpcio-tools = "*"
 
 [packages]
 stwberlin_menus = {path = ".", editable = true}
+progressbar2 = "*"
+babel = "*"
+bs4 = "*"
+tornado = "*"
+grpcio = "*"
+protobuf = "*"

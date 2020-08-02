@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+message Meal {
+  int32 day = 1;
+  google.protobuf.Timestamp date = 2;
+  int32 facilityID = 3;
+  string description = 4;
+  repeated float prices = 5;
+  string currency = 6;
+  string category = 7;
+  map<string, string> allergens = 8;
+  repeated Pictogram pictograms = 9;
+}
+
+message Meals {
+    repeated Meal meals = 1;
+}
+
+message Pictogram {
+  string image_src = 1;
+  string description = 2;
+  string emoji = 3;
+}
+
+message HealthPictogram {
+  string color = 1;
+  Pictogram pictogram = 2;
+}
+
+// Service requests
+
+message MenuRequest {
+  string name = 1;
+}
+
+message PictogramRequest {
+  int64 id = 1;
+}
+
+message DiningFacilityCodesRequest {
+  int64 id = 1;
+}
+
+// Service results
+
+message MenuResult {
+  int64 facility = 1;
+  string facility_name = 2;
+  int32 day = 3;
+  google.protobuf.Timestamp date = 4;
+  map<string, Meals> menu = 5;
+}
+
+message PictogramResult {
+  repeated Pictogram pictograms = 1;
+}
+
+message DiningFacilityCodesResult {
+  repeated Meal menus = 1;
+}
+
+// Service
+service STWBerlinMenuService {
+    // Get multiple
+    rpc GetMenu(MenuRequest) returns (MenuResult) {}
+    rpc GetPictograms(PictogramRequest) returns (PictogramResult) {}
+    rpc GetDiningFacilityCodes(DiningFacilityCodesRequest) returns (DiningFacilityCodesResult) {}
+}

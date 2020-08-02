@@ -59,6 +59,24 @@ def lint(c):
 
 
 @task
+def gen_protos(c):
+    """Compile protobuf grpc service definition
+    """
+    # from grpc_tools import protoc
+    proto_files = [str(ROOT_DIR.joinpath(p).absolute()) for p in ["service.proto"]]
+    proto_output = str(SOURCE_DIR.joinpath("grpc").absolute())
+    for proto in proto_files:
+        c.run(str(" ").join([
+            "pipenv run python -m grpc_tools.protoc",
+            "-I={}".format(str(ROOT_DIR.absolute())),
+            "--python_out={}".format(proto_output),
+            "--grpc_python_out={}".format(proto_output),
+            proto
+        ]))
+        print("Compiled {} to {}".format(proto, proto_output))
+
+
+@task
 def test(c, min_coverage=None):
     """Run tests
     """

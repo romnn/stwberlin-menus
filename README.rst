@@ -38,10 +38,29 @@ See the `official documentation`_ for more information.
 
     import stwberlin_menus
 
+Data source
+------------
+
+This library uses `stw.berlin`_ to scrape menu data
+
+.. _stw.berlin: https://www.stw.berlin
+
+.. code-block:: console
+
+    $ curl -d 'resources_id=537&date=2019-07-03' -X POST 'https://www.stw.berlin/xhr/speiseplan-wochentag.html'
+
 Development
 -----------
 
 For detailed instructions see `CONTRIBUTING <CONTRIBUTING.rst>`_.
+
+Compiling the proto schemas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can compile the `service.proto` definitions with
+
+.. code-block:: console
+
+    $ invoke gen-protos                 # Will generate python classes in stwberlin_menus/grpc
 
 Tests
 ~~~~~~~
